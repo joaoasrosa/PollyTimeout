@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.0.0
+MinimumVisualStudioVersion = 10.0.0.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyTimeout.Api", "src/PollyTimeout.Api/PollyTimeout.Api.csproj", "{0250FA88-A34D-4DC0-8231-F02DDF2943C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyTimeout.Persistence.Adapter", "src/PollyTimeout.Persistence.Adapter\PollyTimeout.Persistence.Adapter.csproj", "{4543B48D-B74B-4B30-A002-402C585B7F38}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{8925D73B-8A5F-4C2D-B9E0-561447CDC90A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{CCB80EA3-318B-4219-89E7-950C81B42300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyTimeout.Domain", "src\PollyTimeout.Domain\PollyTimeout.Domain.csproj", "{1ED81DAB-DD13-419A-9D9D-32EB42AFC906}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PollyTimeout.Persistence.Adapters.Tests.Unit", "tests\PollyTimeout.Persistence.Adapters.Tests.Unit\PollyTimeout.Persistence.Adapters.Tests.Unit.csproj", "{6B8189A8-B1EB-4925-9276-E394948AFD12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0250FA88-A34D-4DC0-8231-F02DDF2943C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0250FA88-A34D-4DC0-8231-F02DDF2943C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0250FA88-A34D-4DC0-8231-F02DDF2943C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0250FA88-A34D-4DC0-8231-F02DDF2943C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4543B48D-B74B-4B30-A002-402C585B7F38}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4543B48D-B74B-4B30-A002-402C585B7F38}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4543B48D-B74B-4B30-A002-402C585B7F38}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4543B48D-B74B-4B30-A002-402C585B7F38}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED81DAB-DD13-419A-9D9D-32EB42AFC906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED81DAB-DD13-419A-9D9D-32EB42AFC906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED81DAB-DD13-419A-9D9D-32EB42AFC906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED81DAB-DD13-419A-9D9D-32EB42AFC906}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B8189A8-B1EB-4925-9276-E394948AFD12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B8189A8-B1EB-4925-9276-E394948AFD12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B8189A8-B1EB-4925-9276-E394948AFD12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B8189A8-B1EB-4925-9276-E394948AFD12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4543B48D-B74B-4B30-A002-402C585B7F38} = {8925D73B-8A5F-4C2D-B9E0-561447CDC90A}
+		{0250FA88-A34D-4DC0-8231-F02DDF2943C2} = {8925D73B-8A5F-4C2D-B9E0-561447CDC90A}
+		{1ED81DAB-DD13-419A-9D9D-32EB42AFC906} = {8925D73B-8A5F-4C2D-B9E0-561447CDC90A}
+		{6B8189A8-B1EB-4925-9276-E394948AFD12} = {CCB80EA3-318B-4219-89E7-950C81B42300}
+	EndGlobalSection
+EndGlobal
