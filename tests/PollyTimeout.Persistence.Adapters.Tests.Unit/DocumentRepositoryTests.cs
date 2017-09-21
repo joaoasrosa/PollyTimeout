@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net;
 using System.Threading;
 using System.Threading.Tasks;
@@ -34,8 +35,14 @@ namespace PollyTimeout.Persistence.Adapters.Tests.Unit
                 .Callback((string b, string o, CancellationToken c) => { Thread.Sleep(2000); })
                 .ReturnsAsync(new GetObjectResponse());
 
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            
             await Record.ExceptionAsync(async () => await _sut.GetDocumentAsync("dummy", "document.json"));
+            
+            stopWatch.Stop();
 
+            stopWatch.Elapsed.Should().BeCloseTo(TimeSpan.FromSeconds(2), 100);
             _policy.TimeoutTriggered.Should().BeTrue();
         }
         
@@ -53,11 +60,18 @@ namespace PollyTimeout.Persistence.Adapters.Tests.Unit
                 .ReturnsAsync(stubResponse);
 
             Document result = null;
+            
+            var stopWatch = new Stopwatch();
+            stopWatch.Start();
+            
             await Record.ExceptionAsync(async () =>
             {
                 result = await _sut.GetDocumentAsync("dummy", "document.json");
             });
 
+            stopWatch.Stop();
+
+            stopWatch.Elapsed.Should().BeCloseTo(TimeSpan.FromSeconds(2), 100);
             result.Should().BeNull();
             _policy.TimeoutTriggered.Should().BeTrue();
         }
